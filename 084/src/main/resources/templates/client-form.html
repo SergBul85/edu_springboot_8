@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Form</title>
+</head>
+<body>
+
+FIll the form. Enter data in required fields.
+<br><br>
+
+<form th:action="@{/proceessForm}" th:object="${client}" method="post">
+
+    First name: <input type="text" th:field="*{firstName}">
+    <br><br>
+    Last name*:  <input type="text" th:field="*{lastName}">
+
+
+    <br><br>
+    <input type="submit">
+</form>
+
+</body>
+</html>
